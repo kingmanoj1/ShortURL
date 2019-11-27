@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detail</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            table, td, th {  
+            border: 1px solid #ddd;
+            text-align: center;
+            }
+
+            table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-left:330px; 
+            margin-right:200px;
+            }
+
+            th, td {
+            padding: 15px;
+            }
+            
+         </style>
+    </head>
+
+    <body>
+
+        <h1>Detail Page</h1>
+        <div>
+           
+           Detail of Code-<b>{{code}}</b><br><br>
+           <b>Total Visit</b> <b>{{dd}}</b><br><br>
+            <table>
+                <thead>
+                    
+                    <th>Date</th>
+                    <th>No of Visit</th>
+                </thead>
+            <tbody>
+            {% for i in detail %}
+            <tr>
+                <td>{{i.date}}</td>
+                <td>{{i.event_count}}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+        </div>
+        
+    </body>
+</html>
